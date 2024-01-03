@@ -1,0 +1,17 @@
+<header>
+    <h1>{{headerdat | async}}</h1>
+</header>
+<section>
+    <ng-container *ngFor="let pro of obj;index as a">
+        <ul>
+            <li style="display: inline;">
+                <span class="product-number" >{{a+1}}.&nbsp;</span>
+                <span #name class="product-name">{{pro.name}}</span>:
+                <span class="product-price" #price>{{pro.price}}</span>
+                <span style="color: #27ae60;">$</span>
+            </li>
+            <button  (click)="f1(a)">Remove</button>
+            <button  (click)="f3(name,price)">edit</button>
+        </ul>
+    </ng-container>
+</section>
